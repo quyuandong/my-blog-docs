@@ -5,6 +5,13 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false, //不允许未使用的变量
+    // "noUnusedParameters": true,
+    "noEmitOnError": false, //如果ts报错，终止js文件的生成
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,

@@ -13,8 +13,8 @@ export default defineUserConfig({
   base: "/blog-docs/",
   //站点语言配置
   lang: "zh-CN",
-  title: "技术经验总结",
-  description: "技术经验总结，资料文档汇集网站，小紫念沁的博客",
+  title: "个人博客",
+  description: "技术经验总结，资料文档汇集网站，个人的博客",
   dest: "dist",
   head: [
     ["link", { rel: "shortcut icon", type: "image/x-icon", href: "/blog-docs/favicon.ico" }],
@@ -28,7 +28,7 @@ export default defineUserConfig({
   ],
   theme: AnyForkTheme({
     logo: "/images/logo.png",
-    author: "小紫念沁",
+    author: "时光静好",
     authorAvatar: "/images/logo.png",
     //仓库地址
     repo: 'https://github.com/AnyFork/blog-docs',

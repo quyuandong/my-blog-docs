@@ -2,6 +2,7 @@
 
 > 博客项目采用 vuePress2.X 版本进行构建，以本地主题继承 vuepress2.X 默认主题方式进行开发。集成了部分插件，丰富首页功能。围绕 markdown 语法进行文档编写，记录日常工作中的文档资料，最终项目以 html 静态文件形式进行部署。
 
+<!-- TODO: 待修改 -->
 - 仓库地址：https://github.com/AnyFork/blog-docs.git
 - vuePress 官网地址：https://v2.vuepress.vuejs.org/zh/
 - Github 访问地址：https://anyfork.github.io/blog-docs/
