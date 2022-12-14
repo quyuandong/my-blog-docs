@@ -19,8 +19,8 @@ git commit -m "$remarks"
 echo "正在开始提交代码至gitHub与gitee..."
 
 # 远程提交
-git push -f git@github.com:quyuandong/my-blog-docs.git master
-git push -f git@gitee.com:qyd_9/my-blog-docs.git master
+git push --rebase -f git@github.com:quyuandong/my-blog-docs.git origin master
+git push --rebase -f git@gitee.com:qyd_9/my-blog-docs.git origin master
 
 echo "代码提交完成！开始打包"
 
