@@ -23,7 +23,7 @@ showArrow: true
 summary: 加油,为更美好的明天而战!
 #兴趣爱好
 hobby:
-  - 游泳
+  - 做饭
   - 滑雪
   - 乒乓球
   - 玩游戏
