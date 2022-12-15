@@ -5,8 +5,8 @@
 <!-- TODO: 待修改 -->
 - 仓库地址：https://github.com/AnyFork/blog-docs.git
 - vuePress 官网地址：https://v2.vuepress.vuejs.org/zh/
-- Github 访问地址：https://anyfork.github.io/blog-docs/
-- Gitee 访问地址：https://anyfork.gitee.io/blog-docs/
+- Github 访问地址：https://anyfork.github.io/my-blog-docs/
+- Gitee 访问地址：https://anyfork.gitee.io/my-blog-docs/
 
 ## 项目启动
 

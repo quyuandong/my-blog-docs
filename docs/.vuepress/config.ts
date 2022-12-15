@@ -10,21 +10,21 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import viteCompression from 'vite-plugin-compression';
 export default defineUserConfig({
   //站点根路径,默认配置/
-  base: "/blog-docs/",
+  base: "/my-blog-docs/",
   //站点语言配置
   lang: "zh-CN",
   title: "个人博客",
   description: "技术经验总结，资料文档汇集网站，个人的博客",
   dest: "dist",
   head: [
-    ["link", { rel: "shortcut icon", type: "image/x-icon", href: "/blog-docs/favicon.ico" }],
+    ["link", { rel: "shortcut icon", type: "image/x-icon", href: "/my-blog-docs/favicon.ico" }],
     ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }],
-    ["link", { rel: "manifest", href: "/blog-docs/manifest.json" }],
+    ["link", { rel: "manifest", href: "/my-blog-docs/manifest.json" }],
     //关闭referrer,防止第三方图片因防盗链无法显示问题。
     ["meta", { name: "referrer", content: "never" }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['script', { language: 'javascript', type: 'text/javascript', src: '/blog-docs/js/jquery.min.js' }],
-    ['script', { language: 'javascript', type: 'text/javascript', src: '/blog-docs/js/flux.min.js' }],
+    ['script', { language: 'javascript', type: 'text/javascript', src: '/my-blog-docs/js/jquery.min.js' }],
+    ['script', { language: 'javascript', type: 'text/javascript', src: '/my-blog-docs/js/flux.min.js' }],
   ],
   theme: AnyForkTheme({
     logo: "/images/logo.png",
@@ -50,8 +50,8 @@ export default defineUserConfig({
     contributorsText: '贡献者',
     //信息栏展示社交信息
     socialLinks: [
-      { icon: 'GithubOutlined', link: 'https://anyFork.github.io/blog-docs/' },
-      { icon: 'GoogleCircleFilled', link: 'https://anyFork.gitee.io/blog-docs/' },
+      { icon: 'GithubOutlined', link: 'https://anyFork.github.io/my-blog-docs/' },
+      { icon: 'GoogleCircleFilled', link: 'https://anyFork.gitee.io/my-blog-docs/' },
       { icon: 'CloudOutlined', link: 'https://www.anyfork.top/' }
     ],
     //友情链接
