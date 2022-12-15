@@ -8,28 +8,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 构建Node环境
-      - name: Build Node.js Env
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16'
+      # - name: Build Node.js Env
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '16'
       # 检出main分支代码
-      - name: Checkout Code
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
+      # - name: Checkout Code
+      #   uses: actions/checkout@v2.3.1
+      #   with:
+      #     persist-credentials: false
       # 安装依赖
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
       # 项目打包
-      - name: Build Project
-        run: npm run build
+      # - name: Build Project
+      #   run: npm run build
       # github 部署分支gh-pages 到github pages
-      - name: Deploy dist on gh-pages
-        uses: JamesIves/github-pages-deploy-action@4.2.0
-        with:
-          BRANCH: gh-pages
-          FOLDER: dist
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      # - name: Deploy dist on gh-pages
+      #   uses: JamesIves/github-pages-deploy-action@4.2.0
+      #   with:
+      #     BRANCH: gh-pages
+      #     FOLDER: dist
+      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # 同步github代码到gitee
       - name: Sync to Gitee
