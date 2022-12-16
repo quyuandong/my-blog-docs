@@ -4,7 +4,7 @@ export const useCount = (updateFlag: boolean = true): void => {
     onMounted(() => {
         setTimeout(() => {
             pageviewCount({
-                serverURL: 'https://waline.anyfork.top/',
+                serverURL: 'https://qyd.cblovecj.top/',
                 update: updateFlag
             });
         }, 500);
