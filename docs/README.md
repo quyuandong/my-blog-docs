@@ -6,11 +6,11 @@ heroText:
   - 学习要有三心，一信心，二决心，三恒心
 #副标题
 tagline: 不积跬步,无以至千里.不积小流,无以成江海.
-#背景图片，可以为数组,可以为远程背景图片，图片资源网：https://pic.netbian.com/4kmeinv/
+#背景图片，可以为数组,可以为远程背景图片，图片资源网：https://pic.netbian.com/4kmeinv/ 或 https://bing.img.run/
 bgImage:
   - /my-blog-docs/images/index/bg5.jpg
 #背景图片切换时间间隔：默认4秒，单位毫秒
-bgImageSec: 10000
+bgImageSec: 20000
 #背景图片是否动态切换,默认true，false每次刷新会更换图片
 isBgImagetrigger: true
 #是否使用系统默认的背景图片，默认true,开启后会和自定义的背景图片一起使用

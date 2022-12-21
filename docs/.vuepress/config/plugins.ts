@@ -29,7 +29,7 @@ export const plugins = [
   //docsearch插件,https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html
   docsearchPlugin({
     apiKey: '910442e8e605c49851cb85a796d40adf',
-    indexName: 'qyd',
+    indexName: 'qyd_query_suggestions',
     appId: 'FTFC2P7RCN',
     placeholder: '搜索文档',
     locales: {
@@ -87,6 +87,7 @@ export const plugins = [
   }),
   //音乐播放器插件。
   bgmMusicPlayer({
+    // 播放器音乐
     audios: [
       {
         name: '卡农',
@@ -107,8 +108,20 @@ export const plugins = [
         cover: '/my-blog-docs/music/night/night.jpg'
       }
     ],
+    // 是否默认收缩
     autoShrink: true,
-    floatStyle: { bottom: '100px', 'z-index': '999999' }
+    //播放器位置,默认值：{ left: '10px', bottom: '10px','z-index': '999999'}
+    position: { left: '10px', bottom: '10px', 'z-index': '999999' },
+    //自动播放，默认：true
+    autoplay: false,
+    //伸缩模式('mini'/'float'),默认：float
+    shrinkMode: 'float',
+    // 悬浮位置('left'/'right'),默认：left
+    floatPosition: 'left',
+    //悬浮样式，默认{ bottom: '200px', 'z-index': '999999' }
+    floatStyle: { bottom: '100px', 'z-index': '999999' },
+    //播放器主题颜色,默认：#3eaf7c
+    color: '#3eaf7c'
   }),
   //鼠标点击特效插件
   cursorEffects({
@@ -238,9 +251,10 @@ export const plugins = [
   //Waline评论插件,https://vuepress-theme-hope.github.io/v2/comment/zh/config/giscus.html
   commentPlugin({
     provider: 'Waline',
+    // serverURL: 'https://waline.anyfork.top/',
     serverURL: 'https://qyd.cblovecj.top/',
     //是否开启访问量
-    pageview: true
+    pageview: false
   }),
   //自定义容器cardList
   containerPlugin(resolveContainerOptions('cardList')),
