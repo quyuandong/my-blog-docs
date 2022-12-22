@@ -194,9 +194,9 @@ npm run docs:dev
   import type { Theme } from '@vuepress/core'
   import { defaultTheme } from '@vuepress/theme-default'
   import { path } from '@vuepress/utils'
-  import { AnyForkThemeOptions } from './types/theme'
+  import { CustomThemeOptions } from './types/theme'
 
-  export const AnyForkTheme = (options: AnyForkThemeOptions): Theme => {
+  export const CustomTheme = (options: CustomThemeOptions): Theme => {
     return {
       name: 'vuepress-theme-AnyFork',
       extends: defaultTheme(options),
@@ -238,9 +238,9 @@ npm run docs:dev
   import type { Theme } from '@vuepress/core'
   import { defaultTheme } from '@vuepress/theme-default'
   import { path } from '@vuepress/utils'
-  import { AnyForkThemeOptions } from './types/theme'
+  import { CustomThemeOptions } from './types/theme'
 
-  export const AnyForkTheme = (options: AnyForkThemeOptions): Theme => {
+  export const CustomTheme = (options: CustomThemeOptions): Theme => {
     return {
       name: 'vuepress-theme-AnyFork',
       extends: defaultTheme(options),

@@ -1,6 +1,6 @@
 import type { DefaultThemeOptions } from "vuepress";
 
-declare interface AnyForkThemeOptions extends DefaultThemeOptions {
+declare interface CustomThemeOptions extends DefaultThemeOptions {
     author?: string;
     authorAvatar?: string
     socialLinks?: Array<Record<{ icon: string, link: string }>>

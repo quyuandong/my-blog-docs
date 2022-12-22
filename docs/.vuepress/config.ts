@@ -1,8 +1,8 @@
-import { AnyForkTheme } from "./theme";
+import { CustomTheme } from "./theme";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { navbar, plugins, sidebar, firendLink } from './config/index'
-import { AnyForkThemeOptions } from "./theme/types/theme";
+import { CustomThemeOptions } from "./theme/types/theme";
 import { path } from '@vuepress/utils'
 //打包文件大小分析插件
 import { visualizer } from 'rollup-plugin-visualizer';
@@ -26,12 +26,12 @@ export default defineUserConfig({
     ['script', { language: 'javascript', type: 'text/javascript', src: '/my-blog-docs/js/jquery.min.js' }],
     ['script', { language: 'javascript', type: 'text/javascript', src: '/my-blog-docs/js/flux.min.js' }],
   ],
-  theme: AnyForkTheme({
+  theme: CustomTheme({
     logo: "/images/logo.png",
     author: "时光静好",
     authorAvatar: "/images/logo.png",
     //仓库地址
-    repo: 'https://github.com/AnyFork/blog-docs',
+    // repo: 'https://github.com/quyuandong/my-blog-docs',
     //如果你的文档不在仓库的根部
     docsDir: 'docs',
     //是否开启编辑链接
@@ -61,7 +61,7 @@ export default defineUserConfig({
     sidebarDepth: 3,
     navbar: navbar,
     sidebar: sidebar
-  } as AnyForkThemeOptions),
+  } as CustomThemeOptions),
   markdown: {
     headers: {
       level: [1, 2, 3, 4],
