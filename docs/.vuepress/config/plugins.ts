@@ -249,13 +249,13 @@ export const plugins = [
     demo: true
   }),
   //Waline评论插件,https://vuepress-theme-hope.github.io/v2/comment/zh/config/giscus.html
-  commentPlugin({
-    provider: 'Waline',
-    // serverURL: 'https://waline.anyfork.top/',
-    serverURL: 'https://qyd.cblovecj.top/',
-    //是否开启访问量
-    pageview: false
-  }),
+  // commentPlugin({
+  //   provider: 'Waline',
+  //   // serverURL: 'https://waline.anyfork.top/',
+  //   serverURL: 'https://qyd.cblovecj.top/',
+  //   //是否开启访问量
+  //   pageview: false
+  // }),
   //自定义容器cardList
   containerPlugin(resolveContainerOptions('cardList')),
   //自定义容器cardImgList
