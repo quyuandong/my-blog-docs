@@ -1,7 +1,10 @@
 <template>
-  <div class="w-full flex items-center justify-center flex-wrap" v-if="pageTotal > pageSize">
-    <Paginate v-model="pageNumber" :page-count="pageCount" :prev-text="!isMobile ? '上一页' : 'Pre'" :next-text="!isMobile ? '下一页' : 'Next'" :container-class="'pagination'" :page-class="'page-item'" :page-range="3" :margin-pages="3" :hide-prev-next="true"> </Paginate>
-    <div class="sm:my-[20px] flex items-center sm:ml-[50px] leading-[25px]" :style="isMobile ? { fontSize: '10px' } : ''">
+  <div class="flex flex-wrap items-center justify-center w-full" v-if="pageTotal > pageSize">
+    <Paginate v-model="pageNumber" :page-count="pageCount" :prev-text="!isMobile ? '上一页' : 'Pre'"
+      :next-text="!isMobile ? '下一页' : 'Next'" :container-class="'pagination'" :page-class="'page-item'" :page-range="3"
+      :margin-pages="3" :hide-prev-next="true"> </Paginate>
+    <div class="sm:my-[20px] flex items-center sm:ml-[50px] leading-[25px]"
+      :style="isMobile ? { fontSize: '10px' } : ''">
       <div class="h-full pr-[5px]">跳至: <input type="text" v-model="jumpPageNumber" class="w-5 h-[15px]" /></div>
       <div class="h-full pr-[5px]">
         <span>每页：</span>
@@ -21,11 +24,17 @@
 import { computed, ref, watch } from 'vue'
 import Paginate from 'vuejs-paginate-next'
 import { isMobile } from '../../utils'
-const props = defineProps<{
-  pageTotal: number
-}>()
-const pageNumber = ref(1)
-const pageSize = ref(10)
+const props = defineProps({
+  pageTotal: {
+    type: Number,
+    default: 0,
+    required: true
+  },
+  pageNumber: { type: Number, default: 0 },
+  pageSize: { type: Number, default: 10 }
+})
+const pageNumber = ref(props.pageNumber)
+const pageSize = ref(props.pageSize)
 const emit = defineEmits<{
   (e: 'click', value: { page: number; pageSize: number }): void
 }>()
@@ -79,6 +88,7 @@ watch(pageSize, (newVal) => {
     outline: none;
   }
 }
+
 @media (max-width: 640px) {
   .pagination {
     display: inline-flex;
@@ -105,6 +115,7 @@ watch(pageSize, (newVal) => {
     outline: none;
   }
 }
+
 .active {
   background-color: var(--c-text-accent);
 }
