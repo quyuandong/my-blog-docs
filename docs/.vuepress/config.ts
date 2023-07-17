@@ -13,7 +13,7 @@ export default defineUserConfig({
   base: "/my-blog-docs/",
   //站点语言配置
   lang: "zh-CN",
-  title: "个人博客",
+  title: "时光静好",
   description: "技术经验总结，资料文档汇集网站，个人的博客",
   dest: "dist",
   head: [
