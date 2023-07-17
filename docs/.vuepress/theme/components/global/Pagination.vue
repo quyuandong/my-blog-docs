@@ -1,10 +1,7 @@
 <template>
   <div class="flex flex-wrap items-center justify-center w-full" v-if="pageTotal > pageSize">
-    <Paginate v-model="pageNumber" :page-count="pageCount" :prev-text="!isMobile ? '上一页' : 'Pre'"
-      :next-text="!isMobile ? '下一页' : 'Next'" :container-class="'pagination'" :page-class="'page-item'" :page-range="3"
-      :margin-pages="3" :hide-prev-next="true"> </Paginate>
-    <div class="sm:my-[20px] flex items-center sm:ml-[50px] leading-[25px]"
-      :style="isMobile ? { fontSize: '10px' } : ''">
+    <Paginate v-model="pageNumber" :page-count="pageCount" :prev-text="!isMobile ? '上一页' : 'Pre'" :next-text="!isMobile ? '下一页' : 'Next'" :container-class="'pagination'" :page-class="'page-item'" :page-range="3" :margin-pages="3" :hide-prev-next="true"> </Paginate>
+    <div class="sm:my-[20px] flex items-center sm:ml-[50px] leading-[25px]" :style="isMobile ? { fontSize: '10px' } : ''">
       <div class="h-full pr-[5px]">跳至: <input type="text" v-model="jumpPageNumber" class="w-5 h-[15px]" /></div>
       <div class="h-full pr-[5px]">
         <span>每页：</span>

@@ -3,20 +3,20 @@
     <template #page>
       <main class="page">
         <div class="pt-[20px] w-full sm:w-[var(--content-width)] my-0 mx-auto">
-          <Icon icon="AppstoreTwotone" :iconSize="25" text="分类列表" :textSize="20"
-            class="dark:hover:text-[#fff] ml-[10px]" />
+          <Icon icon="AppstoreTwotone" :iconSize="25" text="分类列表" :textSize="20" class="dark:hover:text-[#fff] ml-[10px]" />
           <div class="w-full flex flex-wrap my-[10px]">
-            <RouterLink v-for="({ items, path }, name) in categoryMap.map" :key="name" :to="path"
-              class="shadow-item flex items-center text-[#666]  font-normal px-[8px] h-[35px] mt-[5px] sm:px-[14px] sm:h-[50px] hover:bg-[#3eaf7c] hover:text-[#fff] dark:bg-[#181818] dark:hover:bg-[#3eaf7c] dark:text-[#fff] rounded mx-[5px]">
+            <RouterLink
+              v-for="({ items, path }, name) in categoryMap.map"
+              :key="name"
+              :to="path"
+              class="shadow-item flex items-center text-[#666] font-normal px-[8px] h-[35px] mt-[5px] sm:px-[14px] sm:h-[50px] hover:bg-[#3eaf7c] hover:text-[#fff] dark:bg-[#181818] dark:hover:bg-[#3eaf7c] dark:text-[#fff] rounded mx-[5px]"
+            >
               <span class="text-[10px] sm:text-[1rem]">{{ name }}</span>
-              <span class="ml-[10px] w-[1.2rem] h-[1.2rem] leading-[1.2rem] text-center text-[.7rem] text-[#fff]"
-                :style="{ 'background-color': useRandomColor() }"> {{ items.length }}</span>
+              <span class="ml-[10px] w-[1.2rem] h-[1.2rem] leading-[1.2rem] text-center text-[.7rem] text-[#fff]" :style="{ 'background-color': useRandomColor() }"> {{ items.length }}</span>
             </RouterLink>
           </div>
-          <BlogItem v-for="(item, index) in blogData" :page="item.info" :position="index % 2 == 0 ? 'left' : 'right'"
-            :key="index" />
-          <Pagination :pageTotal="total" :pageNumber="pages.pageNumber" :pageSize="pages.pageSize" @click="getBack">
-          </Pagination>
+          <BlogItem v-for="(item, index) in blogData" :page="item.info" :position="index % 2 == 0 ? 'left' : 'right'" :key="index" />
+          <Pagination :pageTotal="total" :pageNumber="pages.pageNumber" :pageSize="pages.pageSize" @click="getBack"> </Pagination>
         </div>
       </main>
     </template>

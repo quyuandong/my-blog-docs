@@ -1,8 +1,8 @@
 <template>
   <div class="hero w-full relative h-[250px] flex justify-center items-center overflow-hidden" :style="homeBanner.bannerOptions.bgImageStyle">
     <!--轮播图 -->
-    <div id="banner" class="w-full absolute z-0 overflow-hidden">
-      <img :src="item" v-for="(item,index) in mixImage" :key="`${item}_${index}`" />
+    <div id="banner" class="absolute z-0 w-full overflow-hidden">
+      <img :src="item" v-for="(item, index) in mixImage" :key="`${item}_${index}`" />
     </div>
     <!--标题 -->
     <div class="index z-100 absolute text-[#fff] text-center">

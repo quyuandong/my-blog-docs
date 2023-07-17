@@ -1,12 +1,12 @@
 <template>
   <ParentLayout>
     <template #page>
-      <main class="page h-screen">
+      <main class="h-screen page">
         <div class="mt-[40px] sm:w-[var(--content-width)] my-0 relative ul-item mx-[15px] sm:mx-auto">
           <h3 class="title relative pl-[1.2rem]">时间轴</h3>
           <ul class="relative mt-[50px]">
             <li v-for="(item, index) in timelineData" :key="index" class="leading-[50px]">
-              <h3 class="point relative">{{ item.year }}</h3>
+              <h3 class="relative point">{{ item.year }}</h3>
               <ul class="pl-0">
                 <li v-for="{ info, path } in item.value" class="relative leading-[50px]">
                   <span class="point mr-[10px]">{{ dateFormat(info.data.frontmatter.date) }}</span>

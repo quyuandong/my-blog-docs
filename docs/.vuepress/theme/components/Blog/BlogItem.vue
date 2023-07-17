@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-item relative w-full py-[8px] px-[10px] sm:px-[20px] sm:py-[16px] rounded dark:bg-[#181818] bg-[#fff] shadow-box mb-[20px] cursor-pointer box-border">
+  <div @click="jump(page.data.path)" class="blog-item relative w-full py-[8px] px-[10px] sm:px-[20px] sm:py-[16px] rounded dark:bg-[#181818] bg-[#fff] shadow-box mb-[20px] cursor-pointer box-border">
     <div v-if="!isMobile">
       <div class="left-box flex mt-[15px] items-center z-[300]" v-if="position == 'left'">
         <div class="img h-[200px] rounded-[8px] overflow-hidden flex-[0_0_50%]">
@@ -28,7 +28,7 @@
       <div class="img w-full h-[150px] rounded-[8px] overflow-hidden">
         <img :src="page.data.frontmatter.image ? page.data.frontmatter.image : withBase('/images/index/bg1.jpg')" class="w-full h-full" />
       </div>
-      <div class="content w-full flex flex-wrap overflow-hidden">
+      <div class="flex flex-wrap w-full overflow-hidden content">
         <div class="title w-full !text-[0.9rem] mt-2">
           <router-link :to="page.data.path" class="font-bold text-[color:var(--text-color)] truncate block" :title="page.data.title">{{ page.data.title }}</router-link>
         </div>
@@ -46,10 +46,19 @@
 import { withBase } from '@vuepress/client'
 import BlogItemInfo from './BlogItemInfo.vue'
 import { isMobile } from '../../utils'
+import { useRoute, useRouter } from 'vue-router'
+const router = useRouter()
+
 const props = defineProps<{
   page: Record<string, any>
   position: string
 }>()
+
+//  跳转
+const jump = (path) => {
+  console.log('path: ', path)
+  router.push(path)
+}
 </script>
 
 <style lang="scss" scoped>

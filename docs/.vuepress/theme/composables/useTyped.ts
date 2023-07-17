@@ -1,8 +1,8 @@
 import Typed from 'typed.js'
-import { usePageFrontmatter, PageFrontmatterRef } from "@vuepress/client";
-import { nextTick, onMounted, onUnmounted } from 'vue';
+import { usePageFrontmatter, PageFrontmatterRef } from '@vuepress/client'
+import { nextTick, onMounted, onUnmounted } from 'vue'
 export const useTyped = (domRemark?: string) => {
-  const frontmatter = usePageFrontmatter() as PageFrontmatterRef<Blog.Home>;
+  const frontmatter = usePageFrontmatter() as PageFrontmatterRef<Blog.Home>
   const dom: string = domRemark ? domRemark : '.typed'
   let typedObject: any
   const typedFction = () => {
