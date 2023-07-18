@@ -10,7 +10,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import viteCompression from 'vite-plugin-compression';
 export default defineUserConfig({
   //站点根路径,默认配置/
-  base: "/",
+  base: "/my-blog-docs/",
   //站点语言配置
   lang: "zh-CN",
   title: "时光静好",
