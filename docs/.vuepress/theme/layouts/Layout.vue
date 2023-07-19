@@ -1,14 +1,14 @@
 <template>
   <ParentLayout>
     <template #page-top>
-      <div class="title sm:w-[var(--content-width)] my-0 mx-auto shadow-item py-0 px-6 rounded">
+      <div class="title sm:w-[var(--content-width)] my-2  mx-auto shadow-item py-0 px-6 rounded">
         <div class="flex items-center justify-between">
           <h1 class="text-[1.3rem] sm:text-[2rem]">{{ page.title }}</h1>
           <Icon icon="RollbackOutlined" @click="$router.go(-1)" class="cursor-pointer">
             <span v-if="!isMobile">返回</span>
           </Icon>
         </div>
-        <BlogItemInfo :page="page" class="pb-5 mt-0"></BlogItemInfo>
+        <BlogItemInfo :page="page" class="pb-5 my-2 border-2 border-red-600"></BlogItemInfo>
       </div>
     </template>
     <template #page-bottom>

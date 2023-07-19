@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "基于vuepress2.X开发的博客系统",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "serve": "vuepress dev docs",
     "build": "vuepress build docs",
     "dep": "bash deploy.sh",
     "debug": "vuepress build docs --debug"
