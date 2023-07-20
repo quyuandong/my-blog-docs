@@ -28,9 +28,9 @@ export const plugins = [
   }),
   //docsearch插件,https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html
   docsearchPlugin({
-    apiKey: '910442e8e605c49851cb85a796d40adf',
-    indexName: 'qyd_query_suggestions',
-    appId: 'FTFC2P7RCN',
+    apiKey: '298caffe5be4c8df40c117692634afb4',
+    indexName: 'blog-doc',
+    appId: 'J5CFH77FY4',
     placeholder: '搜索文档',
     locales: {
       '/': {
