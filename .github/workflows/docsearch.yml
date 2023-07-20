@@ -1,4 +1,4 @@
-name:  algolia 文档搜索流程
+name:  algolia searchDoc
 
 on:
   push:
