@@ -1,9 +1,9 @@
 name:  algolia searchDoc
 
-on: deployment
-  # push:
-  #   branches:
-  #     - main
+on:
+  push:
+    branches:
+      - main
 # jobs:
 #   algolia:
 #     runs-on: ubuntu-latest
