@@ -11,17 +11,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      # 构建Node环境
+      - name: Build Node.js Env
+        uses: actions/setup-node@v1
         with:
-          node-version: 16
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+          node-version: '14'
+      # 检出main分支代码
+      - name: Checkout Code
+        uses: actions/checkout@v2.3.1
         with:
-          version: 7
-          run_install: true
-      - name: Build
-        run: yarn build
+          persist-credentials: false
+      # 安装依赖
+      - name: Install dependencies
+        run: npm install
+      # 项目打包
+      - name: Build Project
+        run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
