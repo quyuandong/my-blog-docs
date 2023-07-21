@@ -1,8 +1,8 @@
 {
   "index_name": "blog-doc",
   "start_urls": [
-    "https://quyuandong.github.io/my-blog-docs/",
-    "https://qyd_9.gitee.io/my-blog-docs/"
+    "https://qyd_9.gitee.io/my-blog-docs/",
+    "https://quyuandong.github.io/my-blog-docs/"
   ],
   "rateLimit": 8,
   "maxDepth": 10,
@@ -25,6 +25,8 @@
     }
   },
   "custom_settings": {
-    "attributesForFaceting": ["lang"]
+    "attributesForFaceting": [
+      "lang"
+    ]
   }
 }

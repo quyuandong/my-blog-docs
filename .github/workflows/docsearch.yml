@@ -2,11 +2,11 @@ name:  algolia searchDoc
 
 on:
   # 手动触发
-  # workflow_dispatch: 
+  workflow_dispatch: 
   # 推送main分支触发
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
