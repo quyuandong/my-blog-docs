@@ -1,9 +1,12 @@
 name:  algolia searchDoc
 
-on: 
-  push:
-    branches:
-      - main
+on:
+  # 手动触发
+  workflow_dispatch: 
+  # 推送main分支触发
+  # push:
+  #   branches:
+  #     - main
 jobs:
   algolia:
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
         run: echo "::set-output name=config::$(cat docsearch.json | jq -r tostring)"
 
       - name: Push indices to Algolia
-        uses: signcl/docsearch-scraper-action@master
+        uses: signcl/docsearch-scraper-action@main
         env:
 
           APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
