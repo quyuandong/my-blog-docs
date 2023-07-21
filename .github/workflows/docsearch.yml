@@ -27,11 +27,13 @@ jobs:
       # 项目打包
       - name: Build Project
         run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      # github 部署分支gh-pages 到github pages
+      - name: Deploy dist on gh-pages
+        uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: docs/.vitepress/dist
+          branch: gh-pages
+          folder: dist
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
   algolia:
     needs: deploy
