@@ -25,10 +25,11 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: docs/.vitepress/dist
-          
+
   algolia:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -40,7 +41,6 @@ jobs:
       - name: Push indices to Algolia
         uses: signcl/docsearch-scraper-action@main
         env:
-
           APPLICATION_ID: ${{ secrets.ALGOLIA_APP_ID }}
           API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
           CONFIG: ${{ steps.algolia_config.outputs.config }}
