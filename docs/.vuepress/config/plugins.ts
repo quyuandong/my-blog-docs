@@ -81,7 +81,7 @@ export const plugins = [
   }),
   //复制加版权插件，https://vuepress-theme-hope.github.io/v2/copyright/zh/config.html
   copyrightPlugin({
-    hostname: 'https://quyuandong.github.io/my-blog-docs/',
+    hostname: 'https://qyd_9.gitee.io/my-blog-docs/',
     author: '时光静好',
     global: true
   }),

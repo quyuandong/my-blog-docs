@@ -5,7 +5,7 @@ import { CustomThemeOptions } from './types/theme'
 
 export const CustomTheme = (options: CustomThemeOptions): Theme => {
   return {
-    name: 'vuepress-theme-AnyFork',
+    name: 'vuepress-theme-qyd',
     extends: defaultTheme(options),
     alias: {
       '@theme/Home.vue': path.resolve(__dirname, './components/Home.vue'),
