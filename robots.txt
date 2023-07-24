@@ -5,4 +5,4 @@ Allow: /
 User-agent:*
 Disallow:
 
-Sitemap: https://quyuandong.github.io/my-blog-docs/sitemap.xml
+Sitemap: https://quyuandong.github.io/my-blog-docs/my-blog-docs/sitemap.xml
