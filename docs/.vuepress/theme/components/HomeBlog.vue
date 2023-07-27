@@ -30,5 +30,5 @@ const getBack = (value: { page: number; pageSize: number }) => {
   pages.pageSize = pageSize
 }
 //触发首页浏览量统计
-useCount(false)
+useCount(true)
 </script>

@@ -14,7 +14,7 @@
     <Icon icon="HourglassOutlined" :text="timeAndWord.minutes" :iconSize="isMobile ? 12 : 18" :textSize="isMobile ? 10 : 14" class="text-[#7F7F7F] text-[13px] mr-[5px] sm:mr-[1rem]" v-if="timeAndWord.minutes"></Icon>
     <!-- 浏览量-->
     <Icon icon="FireOutlined" class="text-[#7F7F7F] text-[13px] sm:mr-[1rem]" :iconSize="isMobile ? 12 : 18" :textSize="isMobile ? 10 : 14">
-      <span class="waline-pageview-count" :data-path="page.path" :style="isMobile ? { fontSize: '10px' } : { 'padding-left': '5px' }"></span>
+      <span class="waline-pageview-count" :data-path="'/my-blog-docs'+page.path" :style="isMobile ? { fontSize: '10px' } : { 'padding-left': '5px' }"></span>
     </Icon>
   </div>
 </template>
