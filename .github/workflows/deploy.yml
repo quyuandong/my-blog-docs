@@ -34,10 +34,11 @@ jobs:
       # github 部署分支gh-pages 到github pages
       - name: '部署dist到gh-pages分支'
         uses: JamesIves/github-pages-deploy-action@4.2.0
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           branch: gh-pages
           folder: dist
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # 同步github代码到gitee
       - name: '同步到gitee'
