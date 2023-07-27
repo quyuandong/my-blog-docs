@@ -1,11 +1,11 @@
 name: Build and Deploy to github & gitee & algolia
 on:
   # 手动触发
-  # workflow_dispatch:
+  workflow_dispatch:
   # 推送main分支触发
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 jobs:
   # 部署和发版
   build-and-deploy:
