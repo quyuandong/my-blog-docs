@@ -20,6 +20,11 @@ export const navbar: (NavbarItems | NavbarGroup | string)[] = [
         icon: 'TagsOutlined'
     },
     {
+        text: '导航',
+        link: '/siteNav/',
+        icon: 'DesktopOutlined'
+    },
+    {
         text: '时间轴',
         link: '/timeline/',
         icon: 'ClockCircleTwotone'

@@ -235,6 +235,17 @@ export const plugins = [
         path: '/timeline/',
         layout: 'Timeline',
         frontmatter: () => ({ title: 'Timeline', sidebar: false })
+      },
+      // 网站导航
+      {
+        key: 'siteNav',
+        // only article with date should be added to timeline
+        filter: (page) => (page.frontmatter.date ? true : false),
+        // sort pages with time
+        sorter: (pageA, pageB) => new Date(pageB.frontmatter.date as string).getTime() - new Date(pageA.frontmatter.date as string).getTime(),
+        path: '/sitenav/',
+        layout: 'SiteNav',
+        frontmatter: () => ({ title: 'SiteNav', sidebar: true })
       }
     ],
     hotReload: true
