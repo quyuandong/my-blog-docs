@@ -4,11 +4,15 @@
     <Icon icon="CopyrightCircleOutlined" text="时光静好 2022" :textSize="15" class="mr-[30px]" />
     <!-- 浏览量-->
     <Icon icon="FireOutlined" class="text-[13px] mr-[1rem]">
-      <span class="waline-pageview-count" data-path="/my-blog-docs/" style="padding-left: 5px"></span>
+      <span class="waline-pageview-count" :data-path="props.dataPath" style="padding-left: 5px"></span>
     </Icon>
   </div>
 </template>
 <script setup lang="ts">
 import { useCount } from '../composables'
+
+const props = defineProps({
+  dataPath: { type: String, default: '/my-blog-docs/' }
+})
 useCount()
 </script>

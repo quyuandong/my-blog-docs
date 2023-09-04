@@ -1,7 +1,4 @@
 {
-  "editor.quickSuggestions": {
-    "strings": true
-  },
   // 忽略的单词项
   "cSpell.words": [
     "vuepress",
