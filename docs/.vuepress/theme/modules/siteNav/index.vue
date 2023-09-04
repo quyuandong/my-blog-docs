@@ -1,9 +1,11 @@
 <template>
   <ParentLayout>
     <template #page>
-      <main class="flex h-screen page flex-column">
-        <div class="site-sidler basis-1/5"></div>
-        <div class="site-wrap basis-4/5  my-0 relative  mx-[15px] sm:mx-auto">
+      <main class="flex site-main page flex-column">
+        <div class="m-4 overflow-hidden rounded site-sidler shadow-item">
+          <SiteNavSider></SiteNavSider>
+        </div>
+        <div class="site-wrap   my-0 relative  mx-[15px] sm:mx-auto">
           <siteNavItem></siteNavItem>
         </div>
       </main>
@@ -13,6 +15,7 @@
 <script setup lang="ts">
 import { useBlogType } from 'vuepress-plugin-blog2/lib/client'
 import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+import SiteNavSider from '../../components/siteNav/SiteNavSider.vue'
 import siteNavItem from '../../components/siteNav/siteNavItem.vue'
 import { computed } from 'vue'
 import { dateFormat } from '../../utils'
@@ -34,8 +37,23 @@ const timelineData: any = computed(() => {
   return objArray
 })
 </script>
-<style lang="css" scoped>
-.site-sidler {
-  flex-basis: 45;
+<style lang="scss" scoped>
+.site-main {
+
+  height: calc(100vh - 90px);
+  overflow: hidden;
+
+  .site-sidler {
+    height: 100%;
+    flex-basis: 15%;
+    // background-color: red;
+
+  }
+
+  .site-wrap {
+    height: 100%;
+    overflow-y: auto;
+    flex-basis: 85%;
+  }
 }
 </style>

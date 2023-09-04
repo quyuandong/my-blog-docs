@@ -1,12 +1,17 @@
 <template>
-  <a v-if="link" :class="['nav-detail', isDark ? 'nav-detail-dark' : '']" :href="link" target="_blank" rel="noreferrer">
+  <a v-if="link" :class="['nav-detail', 'relative', isDark ? 'nav-detail-dark' : '']" :href="link" target="_blank"
+    rel="noreferrer">
+    <span class="absolute top-0 right-0 flex w-3 h-3">
+      <span class="absolute inline-flex w-full h-full rounded-full opacity-75 bg-sky-400 animate-ping"></span>
+      <span class="relative inline-flex w-3 h-3 rounded-full bg-sky-500"></span>
+    </span>
     <div class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
         <div v-else-if="icon && typeof icon === 'string'" class="icon">
           <img :src="icon" :alt="title" onerror="this.parentElement.style.display='none'" />
         </div>
-        <div v-if="title" class="title">{{ title }}</div>
+        <div v-if="title" class="title ">{{ title }}</div>
       </div>
       <p v-if="desc" class="desc ">{{ desc }}</p>
     </div>
@@ -42,7 +47,7 @@ const svg = computed(() => {
 <style lang="scss" scoped>
 .nav-detail {
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 4px 15px 0 rgba(31, 38, 135, 0.27);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   border-radius: 10px;
@@ -105,6 +110,20 @@ const svg = computed(() => {
     font-size: 16px;
     font-weight: 600;
     color: #303133;
+
+    background: linear-gradient(to right, #27ae60, #aa55ff, #ffaa00) no-repeat right bottom;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: all 500ms ease;
+    /*即下划线（背景图）在默认情况下宽度为0 */
+    background-size: 0 2px;
+
+    &:hover {
+      font-size: 17px;
+      color: #27ae60;
+      font-weight: 600;
+      background-size: 100% 2px;
+    }
   }
 
   .desc {

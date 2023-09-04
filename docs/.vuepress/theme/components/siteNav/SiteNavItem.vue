@@ -1,7 +1,7 @@
 <template>
   <div class="w-full pb-5 module-card">
     <h2 class="mt-2 mb-0">
-      <a :href="`#${formatTitle}`" aria-hidden="false">#</a>
+      <a :href="`#${formatTitle}`" aria-hidden="true">#</a>
       测试模板
     </h2>
     <div class="flex flex-wrap w-full">
@@ -41,7 +41,7 @@ import { computed } from 'vue'
 .module-card {
   // min-height: 300px;
   // border-radius: 5px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eeeeee;
   
   
 
